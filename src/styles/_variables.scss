@@ -1,0 +1,39 @@
+// Colors
+$color-bg: #05050b;
+$color-bg-alt: #0a0a16;
+$color-text: #e0e0e0;
+$color-text-muted: #a0a0a0;
+
+$color-primary: #00f0ff; // Neon Cyan
+$color-secondary: #7000ff; // Neon Violet
+$color-accent: #ff0055; // Neon Pink/Red for alerts or highlights
+
+$color-glass: rgba(255, 255, 255, 0.05);
+$color-glass-border: rgba(255, 255, 255, 0.1);
+$color-glass-hover: rgba(255, 255, 255, 0.1);
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $color-primary, $color-secondary);
+$gradient-glow: radial-gradient(circle, rgba($color-primary, 0.4) 0%, rgba($color-bg, 0) 70%);
+
+// Typography
+$font-main: 'Inter', sans-serif;
+$font-display: 'Outfit', sans-serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 8rem;
+
+// Z-Index
+$z-back: -1;
+$z-normal: 1;
+$z-nav: 100;
+$z-modal: 1000;
+$z-preloader: 9999;
+
+// Transitions
+$transition-fast: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);

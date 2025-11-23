@@ -1,0 +1,110 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.whyChooseUs {
+    padding: $spacing-xl 0;
+    background-color: $color-bg;
+    position: relative;
+}
+
+.container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: $spacing-lg;
+    }
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    li {
+        display: flex;
+        gap: $spacing-sm;
+        align-items: flex-start;
+
+        svg {
+            flex-shrink: 0;
+            margin-top: 4px;
+            filter: drop-shadow(0 0 5px rgba($color-primary, 0.5));
+        }
+
+        div {
+            strong {
+                display: block;
+                font-size: 1.1rem;
+                color: $color-text;
+                margin-bottom: 4px;
+            }
+
+            p {
+                color: $color-text-muted;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.industries {
+    @include glass;
+    padding: $spacing-md;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.subHeading {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+    text-align: center;
+}
+
+.industryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-sm;
+}
+
+.industryCard {
+    background: rgba($color-bg, 0.6);
+    padding: $spacing-md;
+    border-radius: 12px;
+    @include flex-center;
+    flex-direction: column;
+    gap: $spacing-sm;
+    transition: all $transition-fast;
+    border: 1px solid transparent;
+
+    svg {
+        color: $color-secondary;
+        transition: transform $transition-fast;
+    }
+
+    span {
+        font-weight: 500;
+        color: $color-text;
+    }
+
+    &:hover {
+        background: rgba($color-secondary, 0.1);
+        border-color: $color-secondary;
+
+        svg {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 8px $color-secondary);
+        }
+    }
+}
